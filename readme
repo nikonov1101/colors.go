@@ -1,0 +1,17 @@
+colors.go
+========
+
+My dumbest possible dependency, but I copy-paste it to most of my tools, so let's glue up Git to my cmd+v.
+
+It supports only text colors: normal and bright. No background colors just because I don't need them.
+
+
+
+Install:
+
+curl -SsL https://raw.githubusercontent.com/nikonov1101/colors.go/refs/heads/main/colors.go > colors.go
+
+or 
+
+go get -u github.com/nikonov1101/colors.go
+
