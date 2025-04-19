@@ -3,7 +3,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/com/nikonov1101/colors.go"
+	"github.com/nikonov1101/colors.go"
 )
 
 func main() {
