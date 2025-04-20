@@ -9,6 +9,7 @@ const (
 	tmagenta = "\033[0;35m"
 	tcyan    = "\033[0;36m"
 	twhite   = "\033[0;37m"
+	tgray    = "\033[0;90m"
 
 	btblack   = "\033[1;30m"
 	btred     = "\033[1;31m"
@@ -18,6 +19,7 @@ const (
 	btmagenta = "\033[1;35m"
 	btcyan    = "\033[1;36m"
 	btwhite   = "\033[1;37m"
+	bgray     = "\033[1;90m"
 
 	noColor = "\033[0m" // no color
 )
@@ -54,6 +56,10 @@ func White(s string) string {
 	return twhite + s + noColor
 }
 
+func Gray(s string) string {
+	return tgray + s + noColor
+}
+
 func BBlack(s string) string {
 	return btblack + s + noColor
 }
@@ -84,4 +90,8 @@ func BCyan(s string) string {
 
 func BWhite(s string) string {
 	return btwhite + s + noColor
+}
+
+func BGray(s string) string {
+	return bgray + s + noColor
 }
