@@ -16,6 +16,7 @@ func main() {
 	fmt.Println(colors.Magenta("normal_magenta"))
 	fmt.Println(colors.Cyan("normal_cyan"))
 	fmt.Println(colors.White("normal_white"))
+	fmt.Println(colors.Gray("normal_gray"))
 
 	fmt.Println()
 	fmt.Println(colors.BBlack("bright_black"))
@@ -26,4 +27,5 @@ func main() {
 	fmt.Println(colors.BMagenta("bright_magenta"))
 	fmt.Println(colors.BCyan("bright_cyan"))
 	fmt.Println(colors.BWhite("bright_white"))
+	fmt.Println(colors.BGray("bright_gray"))
 }
