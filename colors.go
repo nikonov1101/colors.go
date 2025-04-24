@@ -1,5 +1,9 @@
 package colors
 
+import (
+	"os"
+)
+
 const (
 	tblack   = "\033[0;30m"
 	tred     = "\033[0;31m"
@@ -24,74 +28,82 @@ const (
 	noColor = "\033[0m" // no color
 )
 
+func colorize(color, s string) string {
+	// follow the https://no-color.org/ spec.
+	if len(os.Getenv("NO_COLOR")) > 0 {
+		return s
+	}
+	return color + s + noColor
+}
+
 func Black(s string) string {
-	return tblack + s + noColor
+	return colorize(tblack, s)
 }
 
 func Red(s string) string {
-	return tred + s + noColor
+	return colorize(tred, s)
 }
 
 func Green(s string) string {
-	return tgreen + s + noColor
+	return colorize(tgreen, s)
 }
 
 func Yellow(s string) string {
-	return tyellow + s + noColor
+	return colorize(tyellow, s)
 }
 
 func Blue(s string) string {
-	return tblue + s + noColor
+	return colorize(tblue, s)
 }
 
 func Magenta(s string) string {
-	return tmagenta + s + noColor
+	return colorize(tmagenta, s)
 }
 
 func Cyan(s string) string {
-	return tcyan + s + noColor
+	return colorize(tcyan, s)
 }
 
 func White(s string) string {
-	return twhite + s + noColor
+	return colorize(twhite, s)
 }
 
 func Gray(s string) string {
-	return tgray + s + noColor
+	return colorize(tgray, s)
 }
 
 func BBlack(s string) string {
-	return btblack + s + noColor
+	return colorize(btblack, s)
 }
 
 func BRed(s string) string {
-	return btred + s + noColor
+	return colorize(btred, s)
 }
 
 func BGreen(s string) string {
-	return btgreen + s + noColor
+	return colorize(btgreen, s)
 }
 
 func BYellow(s string) string {
-	return btyellow + s + noColor
+	return colorize(btyellow, s)
 }
 
 func BBlue(s string) string {
-	return btblue + s + noColor
+	return colorize(btblue, s)
 }
 
 func BMagenta(s string) string {
-	return btmagenta + s + noColor
+	return colorize(btmagenta, s)
 }
 
 func BCyan(s string) string {
-	return btcyan + s + noColor
+	return colorize(btcyan, s)
 }
 
 func BWhite(s string) string {
-	return btwhite + s + noColor
+	return colorize(btwhite, s)
 }
 
 func BGray(s string) string {
-	return bgray + s + noColor
+	return colorize(bgray, s)
 }
